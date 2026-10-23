@@ -9,6 +9,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { ContentCard } from "@/components/ContentCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { contentItems, getFeatured, getTrending, getLatest, getBySection } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -63,11 +64,57 @@ export default function Home() {
             All guides <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((item, i) => (
-            <ContentCard key={item.slug} item={item} index={i} />
-          ))}
-        </div>
+        {featured.length > 0 && (
+          <div className="grid gap-6 lg:grid-cols-[1.45fr_1fr]">
+            <Link
+              href={`/${featured[0].section}/${featured[0].slug}`}
+              className="group overflow-hidden rounded-2xl border border-border bg-white shadow-card transition-shadow hover:shadow-lifted"
+            >
+              <PlaceholderImage
+                iconKey={featured[0].photoKey ?? featured[0].iconKey}
+                accent={featured[0].accent}
+                alt={featured[0].title}
+                className="h-56 w-full sm:h-72"
+                priority
+              />
+              <div className="p-6">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  {featured[0].category} · {featured[0].readTime}
+                </p>
+                <h3 className="mt-2 text-xl font-semibold text-foreground transition-colors group-hover:text-accent sm:text-2xl">
+                  {featured[0].title}
+                </h3>
+                <p className="mt-2 line-clamp-2 text-sm text-muted">{featured[0].dek}</p>
+              </div>
+            </Link>
+
+            <div className="flex flex-col gap-6">
+              {featured.slice(1).map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/${item.section}/${item.slug}`}
+                  className="group flex flex-1 gap-4 rounded-2xl border border-border bg-white p-4 shadow-soft transition-shadow hover:shadow-card"
+                >
+                  <PlaceholderImage
+                    iconKey={item.photoKey ?? item.iconKey}
+                    accent={item.accent}
+                    alt={item.title}
+                    className="h-full min-h-28 w-32 shrink-0 rounded-xl sm:w-40"
+                  />
+                  <div className="py-1">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                      {item.category}
+                    </p>
+                    <h3 className="mt-1.5 font-semibold leading-snug text-foreground transition-colors group-hover:text-accent">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1.5 line-clamp-2 text-sm text-muted">{item.dek}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </AnimatedSection>
 
       <ProcessSteps />
@@ -80,11 +127,29 @@ export default function Home() {
               <p className="mt-1 text-muted">What readers are checking out this week.</p>
             </div>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="grid gap-x-12 gap-y-7 sm:grid-cols-2">
             {trending.map((item, i) => (
-              <ContentCard key={item.slug} item={item} index={i} />
+              <li key={item.slug}>
+                <Link href={`/${item.section}/${item.slug}`} className="group flex gap-5">
+                  <span
+                    aria-hidden
+                    className="font-serif-heading text-4xl font-semibold leading-none text-accent/30 transition-colors group-hover:text-accent"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-accent">
+                      {item.category} · {item.readTime}
+                    </span>
+                    <span className="mt-1.5 block font-semibold leading-snug text-foreground transition-colors group-hover:text-accent">
+                      {item.title}
+                    </span>
+                    <span className="mt-1.5 block line-clamp-2 text-sm text-muted">{item.dek}</span>
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </AnimatedSection>
 

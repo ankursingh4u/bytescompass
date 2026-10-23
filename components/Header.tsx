@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap, Info } from "lucide-react";
+import { Menu, X, Compass, Info } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -33,8 +33,8 @@ export function Header() {
       </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-semibold text-foreground" onClick={() => setOpen(false)}>
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-            <Zap className="h-[18px] w-[18px]" />
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-dark text-accent-foreground ring-2 ring-accent/20">
+            <Compass className="h-[18px] w-[18px]" />
           </span>
           <span className="font-serif-heading text-lg">BytesCompass</span>
         </Link>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap, Mail, MapPin } from "lucide-react";
+import { Compass, Mail, MapPin } from "lucide-react";
 
 const columns = [
   {
@@ -37,8 +37,8 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2 font-semibold text-foreground">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-accent-foreground">
-                <Zap className="h-[18px] w-[18px]" />
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-dark text-accent-foreground ring-2 ring-accent/20">
+                <Compass className="h-[18px] w-[18px]" />
               </span>
               <span className="font-serif-heading text-lg">BytesCompass</span>
             </Link>
