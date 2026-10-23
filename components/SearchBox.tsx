@@ -22,7 +22,7 @@ export function SearchBox({ placeholder = "Search articles, reviews, guides…" 
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        aria-label="Search ByteCompass"
+        aria-label="Search BytesCompass"
         className="w-full rounded-full border border-border bg-white py-3 pl-11 pr-24 text-sm text-foreground shadow-sm transition-shadow focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
       />
       <button

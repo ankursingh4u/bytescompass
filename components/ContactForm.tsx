@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Mail, CheckCircle2 } from "lucide-react";
 
-const HELP_EMAIL = "help@bytecompasshq.com";
+const HELP_EMAIL = "help@bytescompass.com";
 
 const reasons = [
   "General question",

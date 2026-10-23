@@ -16,7 +16,7 @@ export function DisclosureBanner({ compact = false }: { compact?: boolean }) {
     <div className="flex items-start gap-3 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted">
       <Info className="w-4 h-4 mt-0.5 shrink-0 text-accent" />
       <p>
-        ByteCompass may earn a commission when you sign up or buy through links on this
+        BytesCompass may earn a commission when you sign up or buy through links on this
         page. This never affects the price you pay, and it does not influence which tools we
         recommend.
         Read our{" "}

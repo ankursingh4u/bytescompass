@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with ByteCompass for questions, partnerships, press, or corrections.",
+  description: "Get in touch with BytesCompass for questions, partnerships, press, or corrections.",
   alternates: { canonical: "/contact" },
 };
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
 
       <div className="mt-6 flex flex-wrap gap-6 text-sm text-foreground/90">
         <span className="flex items-center gap-1.5">
-          <Mail className="h-4 w-4 text-accent" /> help@bytecompasshq.com
+          <Mail className="h-4 w-4 text-accent" /> help@bytescompass.com
         </span>
         <span className="flex items-center gap-1.5">
           <Clock className="h-4 w-4 text-accent" /> We typically respond within 2 business days

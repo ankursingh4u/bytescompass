@@ -12,18 +12,18 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { contentItems, getFeatured, getTrending, getLatest, getBySection } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "ByteCompass — Smart Software Buying Guides & Reviews",
+  title: "BytesCompass — Honest Tech & Gadget Buying Guides",
   alternates: { canonical: "/" },
 };
 
 const categories = [
-  { label: "Security & Privacy", description: "Password managers & VPNs", iconKey: "security", accent: "indigo" as const },
-  { label: "Productivity", description: "Project & task management", iconKey: "productivity", accent: "teal" as const },
-  { label: "Communication", description: "Video calls & team chat", iconKey: "communication", accent: "rose" as const },
-  { label: "Finance Tools", description: "Invoicing & budgeting apps", iconKey: "finance", accent: "amber" as const },
-  { label: "Cloud Storage", description: "Backup & file sync", iconKey: "cloud", accent: "sky" as const },
-  { label: "AI Tools", description: "Writing & content assistants", iconKey: "ai", accent: "amber" as const },
-  { label: "Marketing Tools", description: "Email & analytics platforms", iconKey: "marketing", accent: "rose" as const },
+  { label: "Laptops & PCs", description: "Notebooks, desktops & upgrades", iconKey: "laptops", accent: "teal" as const },
+  { label: "Headphones & Audio", description: "Earbuds, headphones & speakers", iconKey: "audio", accent: "rose" as const },
+  { label: "Wi-Fi & Networking", description: "Routers, mesh systems & cables", iconKey: "networking", accent: "indigo" as const },
+  { label: "Monitors & Displays", description: "Home office & gaming screens", iconKey: "monitors", accent: "sky" as const },
+  { label: "Smart Home", description: "Speakers, displays & automation", iconKey: "smarthome", accent: "amber" as const },
+  { label: "Smartphones & Tablets", description: "Phones, tablets & batteries", iconKey: "phones", accent: "rose" as const },
+  { label: "Accessories", description: "Keyboards, mice & cables", iconKey: "accessories", accent: "teal" as const },
 ];
 
 export default function Home() {
@@ -130,7 +130,7 @@ export default function Home() {
       <AnimatedSection as="section" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <h2 className="text-2xl font-semibold text-foreground">Latest from ByteCompass</h2>
+            <h2 className="text-2xl font-semibold text-foreground">Latest from BytesCompass</h2>
             <p className="mt-1 text-muted">Freshly published and recently updated.</p>
           </div>
         </div>

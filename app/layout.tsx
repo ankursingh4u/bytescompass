@@ -14,29 +14,29 @@ const fraunces = Fraunces({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://www.bytecompasshq.com";
+const SITE_URL = "https://www.bytescompass.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ByteCompass — Smart Software Buying Guides & Reviews",
-    template: "%s | ByteCompass",
+    default: "BytesCompass — Honest Tech & Gadget Buying Guides",
+    template: "%s | BytesCompass",
   },
   description:
-    "Plain-language software and SaaS reviews, comparisons, and buying guides that explain what actually matters before you subscribe.",
+    "Plain-language tech and gadget reviews, comparisons, and buying guides that explain what actually matters before you buy.",
   openGraph: {
     type: "website",
-    siteName: "ByteCompass",
-    title: "ByteCompass — Smart Software Buying Guides & Reviews",
+    siteName: "BytesCompass",
+    title: "BytesCompass — Honest Tech & Gadget Buying Guides",
     description:
-      "Plain-language software and SaaS reviews, comparisons, and buying guides that explain what actually matters before you subscribe.",
+      "Plain-language tech and gadget reviews, comparisons, and buying guides that explain what actually matters before you buy.",
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: "ByteCompass — Smart Software Buying Guides & Reviews",
+    title: "BytesCompass — Honest Tech & Gadget Buying Guides",
     description:
-      "Plain-language software and SaaS reviews, comparisons, and buying guides that explain what actually matters before you subscribe.",
+      "Plain-language tech and gadget reviews, comparisons, and buying guides that explain what actually matters before you buy.",
   },
 };
 

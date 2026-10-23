@@ -36,7 +36,7 @@ export function Header() {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-accent-foreground">
             <Zap className="h-[18px] w-[18px]" />
           </span>
-          <span className="font-serif-heading text-lg">ByteCompass</span>
+          <span className="font-serif-heading text-lg">BytesCompass</span>
         </Link>
 
         <nav className="hidden items-center gap-5 lg:flex">

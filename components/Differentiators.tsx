@@ -7,7 +7,7 @@ const points = [
   {
     icon: MessagesSquare,
     title: "Plain-language explainers",
-    body: "End-to-end encryption, freemium limits, deliverability reputation — we translate SaaS marketing language into what it actually means for you.",
+    body: "Refresh rates, codec support, mesh backhaul — we translate gadget marketing language into what it actually means for how you'll use the thing.",
   },
   {
     icon: ShieldCheck,
@@ -25,7 +25,7 @@ export function Differentiators() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-2xl font-semibold text-foreground sm:text-3xl">Why read ByteCompass</h2>
+        <h2 className="text-2xl font-semibold text-foreground sm:text-3xl">Why read BytesCompass</h2>
         <p className="mt-2 text-muted">What we try to do differently from a typical affiliate catalog.</p>
       </div>
 

@@ -76,13 +76,13 @@ export interface ContentItem {
   updatedDate: string;
   readTime: string;
   iconKey:
-    | "security"
-    | "productivity"
-    | "communication"
-    | "finance"
-    | "cloud"
-    | "ai"
-    | "marketing";
+    | "laptops"
+    | "phones"
+    | "audio"
+    | "smarthome"
+    | "networking"
+    | "monitors"
+    | "accessories";
   /** Overrides which photo variant to use when a category photo is reused across many items (e.g. "security-2"). Falls back to iconKey's base photo if omitted. */
   photoKey?: string;
   accent: Accent;

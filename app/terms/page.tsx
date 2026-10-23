@@ -3,7 +3,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "The terms that govern your use of ByteCompass.",
+  description: "The terms that govern your use of BytesCompass.",
   alternates: { canonical: "/terms" },
 };
 
@@ -11,7 +11,7 @@ export default function TermsPage() {
   return (
     <LegalLayout title="Terms of Use" updated="October 1, 2026">
       <p>
-        These Terms of Use govern your access to and use of bytecompasshq.com (the &quot;Site&quot;).
+        These Terms of Use govern your access to and use of bytescompass.com (the &quot;Site&quot;).
         By using the Site, you agree to these terms.
       </p>
 
@@ -26,14 +26,14 @@ export default function TermsPage() {
       <h2>No professional advice</h2>
       <p>
         Our reviews, comparisons, and guides reflect our editorial assessment at the time of
-        publication and are not a guarantee of software performance, availability, or pricing.
+        publication and are not a guarantee of product performance, availability, or pricing.
         Features, prices, and plan limits change after publication; always verify current
         details with the vendor before subscribing.
       </p>
 
       <h2>Affiliate links and third-party sites</h2>
       <p>
-        The Site contains links to third-party software vendors, some of which are affiliate links as
+        The Site contains links to third-party retailers and brands, some of which are affiliate links as
         described in our <a href="/affiliate-disclosure">Affiliate Disclosure</a>. We do not
         control, and are not responsible for, the content, policies, pricing, or practices of
         third-party sites you reach through these links.
@@ -42,7 +42,7 @@ export default function TermsPage() {
       <h2>Limitation of liability</h2>
       <p>
         The Site and its content are provided &quot;as is&quot; without warranties of any kind. To the
-        fullest extent permitted by law, ByteCompass is not liable for any damages arising
+        fullest extent permitted by law, BytesCompass is not liable for any damages arising
         from your use of the Site or reliance on its content, including purchase decisions made
         based on our guides or reviews.
       </p>
@@ -55,14 +55,14 @@ export default function TermsPage() {
 
       <h2>Governing law</h2>
       <p>
-        These Terms are governed by the laws of the jurisdiction in which ByteCompass
+        These Terms are governed by the laws of the jurisdiction in which BytesCompass
         operates, without regard to conflict-of-law principles.
       </p>
 
       <h2>Contact</h2>
       <p>
         Questions about these Terms can be sent to{" "}
-        <a href="mailto:help@bytecompasshq.com">help@bytecompasshq.com</a>.
+        <a href="mailto:help@bytescompass.com">help@bytescompass.com</a>.
       </p>
     </LegalLayout>
   );

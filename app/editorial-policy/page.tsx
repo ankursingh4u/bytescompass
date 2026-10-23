@@ -3,7 +3,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Editorial Policy",
-  description: "How ByteCompass researches, fact-checks, and updates its software reviews and guides.",
+  description: "How BytesCompass researches, fact-checks, and updates its tech reviews and buying guides.",
   alternates: { canonical: "/editorial-policy" },
 };
 
@@ -11,13 +11,13 @@ export default function EditorialPolicyPage() {
   return (
     <LegalLayout title="Editorial Policy" updated="October 1, 2026">
       <p>
-        This policy explains how we research, write, and maintain the content on ByteCompass
+        This policy explains how we research, write, and maintain the content on BytesCompass
         Ledger, and how commercial relationships do — and do not — influence what we publish.
       </p>
 
       <h2>Our review methodology</h2>
       <p>
-        We evaluate software against the specific criteria that change real-world performance
+        We evaluate products against the specific criteria that change real-world performance
         for the way people actually use it — sync reliability under real conditions, what&apos;s
         actually gated behind a paid tier, day-to-day workflow friction, and genuine security
         claims — rather than restating a vendor&apos;s pricing-page feature list. Where an article
@@ -44,7 +44,7 @@ export default function EditorialPolicyPage() {
       <h2>Updates and corrections</h2>
       <p>
         Pricing, plan limits, and feature availability change after publication — often more
-        frequently for software than for physical products. We note a &ldquo;last
+        frequently for tech products than for most consumer goods. We note a &ldquo;last
         checked&rdquo; date on pricing and specs, and we revisit and update guides periodically
         rather than leaving them static indefinitely. If you spot an error or an outdated claim,
         tell us through our <a href="/contact">Contact page</a> and we will review and correct

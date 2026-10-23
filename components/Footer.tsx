@@ -40,17 +40,17 @@ export function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-accent-foreground">
                 <Zap className="h-[18px] w-[18px]" />
               </span>
-              <span className="font-serif-heading text-lg">ByteCompass</span>
+              <span className="font-serif-heading text-lg">BytesCompass</span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-muted">
-              Smart software buying guides &amp; reviews — plain-language breakdowns of what
-              actually matters before you subscribe.
+              Honest tech &amp; gadget buying guides — plain-language breakdowns of what
+              actually matters before you buy.
             </p>
             <a
-              href="mailto:help@bytecompasshq.com"
+              href="mailto:help@bytescompass.com"
               className="mt-3 flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-dark"
             >
-              <Mail className="h-3.5 w-3.5" /> help@bytecompasshq.com
+              <Mail className="h-3.5 w-3.5" /> help@bytescompass.com
             </a>
             <p className="mt-3 flex items-start gap-1.5 text-sm text-muted">
               <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
@@ -78,9 +78,9 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-border pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} ByteCompass. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BytesCompass. All rights reserved.</p>
           <p className="max-w-xl">
-            ByteCompass is reader-supported. When you buy through links on our site, we may
+            BytesCompass is reader-supported. When you buy through links on our site, we may
             earn an affiliate commission at no extra cost to you. See our{" "}
             <Link href="/affiliate-disclosure" className="underline hover:text-accent">
               affiliate disclosure

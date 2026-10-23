@@ -39,7 +39,7 @@ export function Hero() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-1.5 rounded-full border border-accent/20 bg-accent-light px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-dark"
             >
-              Smart software buying guides &amp; reviews
+              Honest tech &amp; gadget buying guides
             </motion.div>
 
             <motion.h1
@@ -48,7 +48,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-balance mt-5 text-4xl font-semibold leading-[1.08] text-foreground sm:text-5xl md:text-6xl"
             >
-              Choose the right tool{" "}
+              Buy the right gear{" "}
               <span className="bg-gradient-to-r from-accent via-accent-dark to-accent bg-clip-text text-transparent">
                 the first time.
               </span>
@@ -60,9 +60,9 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mx-auto mt-5 max-w-xl text-lg text-muted lg:mx-0"
             >
-              ByteCompass breaks down what actually matters in password managers, VPNs,
-              project management tools, and more — in plain language — so you can subscribe
-              with confidence instead of guesswork.
+              BytesCompass breaks down what actually matters in laptops, headphones, Wi-Fi
+              gear, monitors, and smart home tech — in plain language — so you can buy with
+              confidence instead of guesswork.
             </motion.p>
 
             <motion.div
@@ -71,7 +71,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mx-auto mt-8 max-w-md lg:mx-0"
             >
-              <SearchBox placeholder="Search password managers, VPNs, project tools…" />
+              <SearchBox placeholder="Search laptops, earbuds, routers, monitors…" />
             </motion.div>
 
             <motion.div
@@ -117,7 +117,7 @@ export function Hero() {
               className="absolute left-4 top-6 w-56 rounded-2xl border border-border bg-white p-4 shadow-lifted"
             >
               <p className="text-xs font-semibold uppercase tracking-wide text-accent">Buying guide</p>
-              <p className="mt-1 text-sm font-semibold text-foreground">Best password managers for teams</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">Best budget laptops for students</p>
               <div className="mt-3 flex items-center gap-1.5 text-xs text-muted">
                 <ListChecks className="h-3.5 w-3.5 text-success" /> 6 criteria checked
               </div>
@@ -143,7 +143,7 @@ export function Hero() {
               className="absolute bottom-4 left-16 w-48 rounded-2xl border border-border bg-white p-4 shadow-lifted"
             >
               <p className="text-xs font-semibold uppercase tracking-wide text-accent">Comparison</p>
-              <p className="mt-1 text-sm font-semibold text-foreground">VPN vs. browser privacy</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">Mesh Wi-Fi vs. one router</p>
               <div className="mt-3 flex items-center gap-1.5 text-xs text-muted">
                 <Users className="h-3.5 w-3.5 text-accent" /> Written by a specialist
               </div>

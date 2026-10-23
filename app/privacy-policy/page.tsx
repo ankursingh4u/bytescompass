@@ -3,7 +3,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "What data ByteCompass collects, how it's used, and how to contact us about privacy.",
+  description: "What data BytesCompass collects, how it's used, and how to contact us about privacy.",
   alternates: { canonical: "/privacy-policy" },
 };
 
@@ -11,8 +11,8 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalLayout title="Privacy Policy" updated="October 1, 2026">
       <p>
-        This policy describes what information ByteCompass (&quot;we,&quot; &quot;us&quot;) collects when you
-        visit bytecompasshq.com, how we use it, and how you can contact us about it.
+        This policy describes what information BytesCompass (&quot;we,&quot; &quot;us&quot;) collects when you
+        visit bytescompass.com, how we use it, and how you can contact us about it.
       </p>
 
       <h2>Information we collect</h2>
@@ -49,8 +49,7 @@ export default function PrivacyPolicyPage() {
 
       <h2>Affiliate links and third-party sites</h2>
       <p>
-        Some links on this site are affiliate links that take you to third-party software
-        vendors. Once you leave our site, that vendor&apos;s own privacy policy applies to any
+        Some links on this site are affiliate links that take you to third-party retailers. Once you leave our site, that retailer&apos;s own privacy policy applies to any
         data they collect.
         See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for more on how these
         links work.
@@ -67,7 +66,7 @@ export default function PrivacyPolicyPage() {
       <p>
         You may request details about what information we hold about you, request corrections,
         or request deletion, subject to applicable law, by emailing{" "}
-        <a href="mailto:help@bytecompasshq.com">help@bytecompasshq.com</a>.
+        <a href="mailto:help@bytescompass.com">help@bytescompass.com</a>.
       </p>
 
       <h2>Changes to this policy</h2>
@@ -79,7 +78,7 @@ export default function PrivacyPolicyPage() {
       <h2>Contact</h2>
       <p>
         Questions about this policy can be sent to{" "}
-        <a href="mailto:help@bytecompasshq.com">help@bytecompasshq.com</a> or through our{" "}
+        <a href="mailto:help@bytescompass.com">help@bytescompass.com</a> or through our{" "}
         <a href="/contact">Contact page</a>.
       </p>
     </LegalLayout>

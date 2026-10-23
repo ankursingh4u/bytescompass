@@ -6,7 +6,7 @@ import { SearchBox } from "@/components/SearchBox";
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Search ByteCompass's articles, reviews, comparisons, and buying guides.",
+  description: "Search BytesCompass's articles, reviews, comparisons, and buying guides.",
   alternates: { canonical: "/search" },
 };
 

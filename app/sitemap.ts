@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { contentItems } from "@/lib/content";
 
-const SITE_URL = "https://www.bytecompasshq.com";
+const SITE_URL = "https://www.bytescompass.com";
 
 const staticRoutes = [
   "",

@@ -1,16 +1,16 @@
 import { ShieldCheck } from "lucide-react";
 
 const authorBios: Record<string, string> = {
-  "Maya Oduya":
-    "Maya covers security and privacy tools, focusing on how encryption and access-control claims translate into real day-to-day protection rather than marketing language.",
-  "Devin Park":
-    "Devin covers productivity and cloud tools, with a focus on real-world workflow fit, sync reliability, and long-term lock-in risk over headline feature lists.",
-  "Priya Nair":
-    "Priya covers AI and emerging software tools, with an emphasis on what a tool actually automates safely versus what still needs human review.",
+  "Rohan Mehta":
+    "Rohan covers laptops, PCs, and home networking, focusing on the specs that change real-world performance rather than the ones that pad a spec sheet.",
+  "Lena Fischer":
+    "Lena covers audio gear and monitors, with an emphasis on long-term comfort, durability, and whether premium features survive daily use.",
+  "Tomás Rivera":
+    "Tomás covers smartphones, smart home devices, and accessories, with a focus on ecosystem lock-in, battery life claims, and privacy trade-offs.",
 };
 
 export function AuthorBio({ author, role }: { author: string; role: string }) {
-  const bio = authorBios[author] ?? "A ByteCompass staff writer focused on practical, evidence-based software guidance.";
+  const bio = authorBios[author] ?? "A BytesCompass staff writer focused on practical, evidence-based tech buying guidance.";
 
   return (
     <div className="flex items-start gap-4 rounded-2xl border border-border bg-surface p-5">
