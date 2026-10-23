@@ -28,7 +28,7 @@ export default function ContactPage() {
         <span className="flex items-start gap-1.5">
           <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
           <span>
-            Punit Joshi, Kuchaman City, PO: Kuchamancity-d, Dist: Nagaur, Rajasthan — 341508, India
+            Krati Parashar, PO: Ajmer, Sub District: Bhinay, Dist: Ajmer, Rajasthan — 305001, India
           </span>
         </span>
       </div>

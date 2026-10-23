@@ -55,7 +55,7 @@ export function Footer() {
             <p className="mt-3 flex items-start gap-1.5 text-sm text-ink-muted">
               <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-teal-300" />
               <span>
-                Punit Joshi, Kuchaman City, PO: Kuchamancity-d, Dist: Nagaur, Rajasthan — 341508,
+                Krati Parashar, PO: Ajmer, Sub District: Bhinay, Dist: Ajmer, Rajasthan — 305001,
                 India
               </span>
             </p>
