@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/90 backdrop-blur">
-      <div className="flex items-center justify-center gap-1.5 bg-accent-dark px-4 py-1.5 text-center text-xs text-white/90">
+      <div className="flex items-center justify-center gap-1.5 bg-ink px-4 py-1.5 text-center text-xs text-ink-muted">
         <Info className="h-3 w-3 shrink-0" />
         <span>
           We may earn a commission from links on this site.{" "}
@@ -39,20 +39,17 @@ export function Header() {
           <span className="font-serif-heading text-lg">BytesCompass</span>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-border bg-surface p-1 lg:flex">
           {navLinks.map((link) => {
             const active = pathname === link.href;
-            const secondary = link.href === "/affiliate-disclosure";
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  secondary
-                    ? `text-xs uppercase tracking-wide ${active ? "text-accent" : "text-muted hover:text-accent"}`
-                    : active
-                      ? "text-accent"
-                      : "text-foreground/80 hover:text-accent"
+                className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
+                  active
+                    ? "bg-ink text-ink-foreground shadow-soft"
+                    : "text-foreground/70 hover:bg-surface-alt hover:text-foreground"
                 }`}
               >
                 {link.label}

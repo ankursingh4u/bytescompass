@@ -27,6 +27,38 @@ const categories = [
   { label: "Accessories", description: "Keyboards, mice & cables", iconKey: "accessories", accent: "teal" as const },
 ];
 
+function SectionHeader({
+  eyebrow,
+  title,
+  sub,
+  href,
+  linkLabel,
+}: {
+  eyebrow: string;
+  title: string;
+  sub?: string;
+  href?: string;
+  linkLabel?: string;
+}) {
+  return (
+    <div className="mb-9 flex items-end justify-between gap-4">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-widest text-highlight">{eyebrow}</p>
+        <h2 className="mt-2 font-serif-heading text-3xl font-semibold text-foreground">{title}</h2>
+        {sub && <p className="mt-1.5 text-muted">{sub}</p>}
+      </div>
+      {href && linkLabel && (
+        <Link
+          href={href}
+          className="hidden shrink-0 items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent sm:flex"
+        >
+          {linkLabel} <ArrowRight className="h-3.5 w-3.5" />
+        </Link>
+      )}
+    </div>
+  );
+}
+
 export default function Home() {
   const featured = getFeatured(3);
   const trending = getTrending(4);
@@ -55,15 +87,13 @@ export default function Home() {
       />
 
       <AnimatedSection as="section" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-semibold text-foreground">Featured guides</h2>
-            <p className="mt-1 text-muted">Start here if you&apos;re not sure where to begin.</p>
-          </div>
-          <Link href="/guides" className="hidden items-center gap-1 text-sm font-medium text-accent hover:text-accent-dark sm:flex">
-            All guides <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
+        <SectionHeader
+          eyebrow="Editor's picks"
+          title="Start here"
+          sub="The guides we'd hand a friend who asked where to begin."
+          href="/guides"
+          linkLabel="All guides"
+        />
         {featured.length > 0 && (
           <div className="grid gap-6 lg:grid-cols-[1.45fr_1fr]">
             <Link
@@ -81,7 +111,7 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                   {featured[0].category} · {featured[0].readTime}
                 </p>
-                <h3 className="mt-2 text-xl font-semibold text-foreground transition-colors group-hover:text-accent sm:text-2xl">
+                <h3 className="mt-2 font-serif-heading text-xl font-semibold text-foreground transition-colors group-hover:text-accent sm:text-2xl">
                   {featured[0].title}
                 </h3>
                 <p className="mt-2 line-clamp-2 text-sm text-muted">{featured[0].dek}</p>
@@ -105,7 +135,7 @@ export default function Home() {
                     <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                       {item.category}
                     </p>
-                    <h3 className="mt-1.5 font-semibold leading-snug text-foreground transition-colors group-hover:text-accent">
+                    <h3 className="mt-1.5 font-serif-heading font-semibold leading-snug text-foreground transition-colors group-hover:text-accent">
                       {item.title}
                     </h3>
                     <p className="mt-1.5 line-clamp-2 text-sm text-muted">{item.dek}</p>
@@ -117,16 +147,13 @@ export default function Home() {
         )}
       </AnimatedSection>
 
-      <ProcessSteps />
-
       <AnimatedSection as="section" className="border-y border-border bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <div className="mb-8 flex items-end justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold text-foreground">Trending right now</h2>
-              <p className="mt-1 text-muted">What readers are checking out this week.</p>
-            </div>
-          </div>
+          <SectionHeader
+            eyebrow="Trending"
+            title="Most read this week"
+            sub="What readers are checking out right now."
+          />
           <ol className="grid gap-x-12 gap-y-7 sm:grid-cols-2">
             {trending.map((item, i) => (
               <li key={item.slug}>
@@ -153,18 +180,37 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      <Differentiators />
+      <AnimatedSection as="section" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <SectionHeader
+          eyebrow="Categories"
+          title="Browse the gear"
+          sub="Jump straight to the category you're researching."
+        />
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+          {categories.map((cat) => (
+            <CategoryCard
+              key={cat.label}
+              href={`/search?category=${encodeURIComponent(cat.label)}`}
+              label={cat.label}
+              description={cat.description}
+              iconKey={cat.iconKey}
+              accent={cat.accent}
+              count={contentItems.filter((i) => i.category === cat.label).length}
+            />
+          ))}
+        </div>
+      </AnimatedSection>
+
+      <ProcessSteps />
 
       <AnimatedSection as="section" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-semibold text-foreground">How-tos &amp; explainers</h2>
-            <p className="mt-1 text-muted">Practical walkthroughs and plain-language breakdowns.</p>
-          </div>
-          <Link href="/articles" className="hidden items-center gap-1 text-sm font-medium text-accent hover:text-accent-dark sm:flex">
-            All articles <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
+        <SectionHeader
+          eyebrow="How-tos & explainers"
+          title="Learn the specs"
+          sub="Practical walkthroughs and plain-language breakdowns."
+          href="/articles"
+          linkLabel="All articles"
+        />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {recentArticles.map((item, i) => (
             <ContentCard key={item.slug} item={item} index={i} />
@@ -174,37 +220,20 @@ export default function Home() {
 
       <AnimatedSection as="section" className="border-t border-border bg-surface">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="mb-2 text-2xl font-semibold text-foreground">Browse by category</h2>
-          <p className="mb-8 text-muted">Jump straight to the gear you&apos;re researching.</p>
-          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {categories.map((cat) => (
-              <CategoryCard
-                key={cat.label}
-                href={`/search?category=${encodeURIComponent(cat.label)}`}
-                label={cat.label}
-                description={cat.description}
-                iconKey={cat.iconKey}
-                accent={cat.accent}
-                count={contentItems.filter((i) => i.category === cat.label).length}
-              />
+          <SectionHeader
+            eyebrow="Latest"
+            title="Fresh from the test bench"
+            sub="Freshly published and recently updated."
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {latest.map((item, i) => (
+              <ContentCard key={item.slug} item={item} index={i} />
             ))}
           </div>
         </div>
       </AnimatedSection>
 
-      <AnimatedSection as="section" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-semibold text-foreground">Latest from BytesCompass</h2>
-            <p className="mt-1 text-muted">Freshly published and recently updated.</p>
-          </div>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {latest.map((item, i) => (
-            <ContentCard key={item.slug} item={item} index={i} />
-          ))}
-        </div>
-      </AnimatedSection>
+      <Differentiators />
 
       <CtaBand />
     </>

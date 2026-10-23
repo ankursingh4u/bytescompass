@@ -29,24 +29,23 @@ export function Differentiators() {
         <p className="mt-2 text-muted">What we try to do differently from a typical affiliate catalog.</p>
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-3">
-        {points.map((point, i) => (
-          <motion.div
-            key={point.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.45, delay: i * 0.08 }}
-            className="rounded-2xl border border-border bg-white p-6 shadow-soft transition-shadow hover:shadow-card"
-          >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-light text-accent-dark">
-              <point.icon className="h-5 w-5" />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.5 }}
+        className="mt-10 grid divide-y divide-border overflow-hidden rounded-3xl border border-border bg-surface sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+      >
+        {points.map((point) => (
+          <div key={point.title} className="p-7">
+            <div className="flex items-center gap-3">
+              <point.icon className="h-5 w-5 text-accent" />
+              <h3 className="text-base font-semibold text-foreground">{point.title}</h3>
             </div>
-            <h3 className="mt-4 text-base font-semibold text-foreground">{point.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{point.body}</p>
-          </motion.div>
+            <p className="mt-3 text-sm leading-relaxed text-muted">{point.body}</p>
+          </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

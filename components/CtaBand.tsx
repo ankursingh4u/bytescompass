@@ -6,14 +6,13 @@ import { ArrowRight, Mail } from "lucide-react";
 
 export function CtaBand() {
   return (
-    <section className="relative overflow-hidden bg-accent-dark py-16">
-      <div className="bg-mesh-ink absolute inset-0 opacity-70" />
+    <section className="mx-auto max-w-6xl px-4 pb-20 pt-4 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.5 }}
-        className="relative mx-auto flex max-w-4xl flex-col items-center gap-5 px-4 text-center sm:px-6"
+        className="bg-mesh-ink relative flex flex-col items-center gap-5 overflow-hidden rounded-3xl bg-ink px-6 py-14 text-center shadow-lifted sm:px-12"
       >
         <h2 className="text-balance text-2xl font-semibold text-white sm:text-3xl">
           Not sure where to start? Pick a guide and we&apos;ll do the comparing for you.
